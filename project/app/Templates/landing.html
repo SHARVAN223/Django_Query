@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+</head>
+<body>
+    <div>
+        <div>
+            <a href="{% url 'all' %}"><button type="submit">All</button></a> <br> <br>
+            <a href="{% url 'filter1' %}"><button type="submit">Filter</button></a>  <br> <br>
+            <a href="{% url 'ascending1' %}"><button type="submit">Order_by</button></a> <br> <br>
+            <a href="{% url 'mfilter' %}"><button type="submit">Multi_filter</button></a> <br> <br>
+            <a href="{% url 'exclude1' %}"><button type="submit">Exclude</button></a> <br> <br>
+        </div>
+
+        <div>
+            {% if data %}
+                <table border="2">
+                    <thead>
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </thead>
+                    {% for i in data %}
+                      <tbody>
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.Name}}</td>
+                            <td>{{i.Email}}</td>
+                            <td>{{i.Age}}</td>
+                            <td>{{i.City}}</td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                </table>
+            {% elif data1 %}
+                  <table border="2">
+                    <thead>
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </thead>
+                    {% for i in data1 %}
+                      <tbody>
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.Name}}</td>
+                            <td>{{i.Email}}</td>
+                            <td>{{i.Age}}</td>
+                            <td>{{i.City}}</td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                </table>
+                 {% elif data2 %}
+                  <table border="2">
+                    <thead>
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </thead>
+                    {% for i in data2 %}
+                      <tbody>
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.Name}}</td>
+                            <td>{{i.Email}}</td>
+                            <td>{{i.Age}}</td>
+                            <td>{{i.City}}</td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                  </table>
+                  {% elif data3 %}
+                  <table border="2">
+                    <thead>
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </thead>
+                    {% for i in data3 %}
+                      <tbody>
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.Name}}</td>
+                            <td>{{i.Email}}</td>
+                            <td>{{i.Age}}</td>
+                            <td>{{i.City}}</td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                  </table>
+                   {% elif data4 %}
+                  <table border="2">
+                    <thead>
+                        <th>S.NO</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </thead>
+                    {% for i in data4 %}
+                      <tbody>
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.Name}}</td>
+                            <td>{{i.Email}}</td>
+                            <td>{{i.Age}}</td>
+                            <td>{{i.City}}</td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                  </table>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
