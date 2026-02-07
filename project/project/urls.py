@@ -25,5 +25,7 @@ urlpatterns = [
     path('filter1/', filter1, name='filter1'),
     path('ascending/',ascending, name='ascending1'),
     path('mfilter/',mfilter,name='mfilter'),
-    path('exclude1/', exclude1,name='exclude1')
+    path('exclude1/', exclude1,name='exclude1'),
+    path('b_create/',b_create, name='b_create'),
+    path('m_delete/', m_delete, name='m_delete')
 ]

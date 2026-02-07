@@ -13,6 +13,12 @@
             <a href="{% url 'ascending1' %}"><button type="submit">Order_by</button></a> <br> <br>
             <a href="{% url 'mfilter' %}"><button type="submit">Multi_filter</button></a> <br> <br>
             <a href="{% url 'exclude1' %}"><button type="submit">Exclude</button></a> <br> <br>
+            <a href="{% url 'b_create' %}"><button type="submit">bulk_create()</button></a> <br> <br>
+            <form action="{% url 'm_delete' %}" method="post">
+              {% csrf_token %}
+                <input type="text" name="number"> 
+                <button type="submit">Multiple_delete()</button>
+            </form> <br> <br>
         </div>
 
         <div>
